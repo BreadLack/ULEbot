@@ -17,14 +17,9 @@ var Twitter = new twit(config);
 /* ________________________ Funciones ________________________ */
 
 
-
-//random de un array (pasas array devuelve elemento ran del array)
-var rnd = function random (arr) {
-	var index = Math.floor(Math.random()*arr.length);
-	return arr[index];
-};
-
-//get lista de ids de los followers
+/**
+ * @desc Método para obtener los seguidores de una cuenta, en este caso nuestro bot. 
+*/
 var getIds = function(){
 	var params1 = {
 		screen_name: 'ULEbot',
@@ -39,19 +34,10 @@ var getIds = function(){
 	})
 }
 
-//comprueba si es una hora concreta
-var check = function(){
-	var today = new Date();
-	var time = today.getHours()+1 + ":" + today.getMinutes();
-	if (time=="10:30"||time=="12:30"||time=="14:30"||time=="16:30"||time=="19:30"||time=="22:30") {
-		if (ultimaH!=time) {
-			logThis("Es la hora man ["+time+"]");
-			ultimaH = time;
-		}
-	}
-}
-
-// Bloqueo a la peñita
+/**
+ * @desc Método para bloquear a un usuario. 
+ * @param String $aquien - ID de la persona a bloquear
+*/
 var block = function(aquien){
 	var params1 = {
 		user_id: aquien,
@@ -65,7 +51,10 @@ var block = function(aquien){
 	})
 }
 
-//hola holita de nuevo
+/**
+ * @desc Método para desbloquear a un usuario. 
+ * @param String $aquien - ID de la persona a desbloquear
+*/
 var unBlock = function(aquien){
 	var params1 = {
 		user_id: aquien,
@@ -79,7 +68,10 @@ var unBlock = function(aquien){
 	})
 }
 
-//eMetodo para los logs
+/**
+ * @desc Método para loguear información de una forma más descriptiva. 
+ * @param String $text - Texto a loguear.
+*/
 var logThis = function(text){
 	var today = new Date();
 	var lg = "["+today.getDate()+"/"+(today.getMonth()+1)+" "+(today.getHours()+1) + ":" + today.getMinutes()+"] * "+text;
