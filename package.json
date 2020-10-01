@@ -1,0 +1,26 @@
+{
+  "name": "informerule",
+  "version": "1.0.0",
+  "description": "Twitter Bot for ULE",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BreadLack/ULEbot"
+  },
+  "keywords": [
+    "twitter"
+  ],
+  "author": "Alberto Miranda & Alberto Fer.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BreadLack/ULEbot/issues"
+  },
+  "homepage": "https://github.com/BreadLack/ULEbot#readme",
+  "dependencies": {
+    "node-wget": "^0.4.3",
+    "twit": "^2.2.11"
+  }
+}

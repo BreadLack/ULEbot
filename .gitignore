@@ -102,3 +102,13 @@ dist
 
 # TernJS port file
 .tern-port
+
+#Twitter API config
+config.js
+configTest.js
+
+#Server Dockerfile
+Dockerfile
+
+#ID from last DM
+lastid.txt
